@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODE AWAY</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: monospace;
+        }
+        h1::after{
+            content: " |";
+            animation: blink 0.5s infinite alternate;
+        }
+        @keyframes blink{
+            0%{opacity: 0;}
+            100%{opacity: 1;}
+        }
+    </style>
+</head>
+<body>
+    <h1></h1>
+    <script>
+        var txt="WELCOME TO CODE AWAY";
+        var i=0;
+        var x=setInterval(function(){
+            document.getElementsByTagName("h1")[0].innerHTML+=txt.charAt(i);
+            i++;
+            if(i>=txt.length){
+                clearInterval(x);
+            }
+        },100)
+    </script>
+</body>
+</html>
