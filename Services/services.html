@@ -1,0 +1,91 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Services</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+        body{
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.85rem;
+        }
+
+        .services{
+            width: 85%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+        }
+
+        .service{
+            padding: 2%;
+            background-color: #fff;
+            transition: 0.3s;
+            position: relative;
+            z-index: 0;
+        }
+
+        .service:hover{
+            box-shadow: 10px 10px 20px rgba(0,0,0,0.4);
+            transform: scale(1.125);
+            z-index: 1;
+        }
+
+        .fa{
+            font-size: 2rem;
+            background-color: #bbe1fa;
+            color: #0f4c75;
+            padding: 2%;
+        }
+
+        .service h1{
+            color: #0f4c75;
+        }
+
+        @media screen and (max-width:700px){
+            .services{
+                flex-direction: column;
+            }
+
+            .service{
+                transition: 0s;
+            }
+
+            .service:hover{
+                box-shadow: none;
+               transform: scale(1);
+               z-index: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="services">
+        <div class="service">
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+            <h1>UI/UX Design</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <div class="service">
+            <i class="fa fa-code" aria-hidden="true"></i>
+            <h1>Web Development</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <div class="service">
+            <i class="fa fa-line-chart" aria-hidden="true"></i>
+            <h1>SEO</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+    </div>
+</body>
+</html>
