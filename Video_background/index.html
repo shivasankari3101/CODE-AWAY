@@ -1,0 +1,114 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video background</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Sacramento&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+        body{
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            min-height: 100vh;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .home{
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        video{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: 0;
+        }
+
+        .content{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            z-index: 1;
+            color: #ef962d;
+            background-color: rgba(0,0,0,0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .navbar{
+            position: fixed;
+            top: 10px;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Sacramento', cursive;
+            font-size: 40px;
+        }
+
+        .slogan{
+            width: 50%;
+        }
+
+        .slogan h1{
+            font-size: 3rem;
+        }
+
+        .slogan p{
+            color: #faf4f4;
+        }
+
+        button{
+            font-size: 1rem;
+            color: #4a3933;
+            padding: 2%;
+            border-radius: 5px;
+            background-color: #ef962d;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width:768px){
+            .slogan{
+                width:80%
+            }
+
+            .slogan h1{
+                font-size: 2rem;
+            }
+
+            button{
+                padding: 3%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- homepage -->
+    <div class="home">
+       <!-- video background -->
+       <video autoplay muted loop>
+           <source src="coffee_video.mp4" type="video/mp4">
+       </video>
+       <!-- homepage content -->
+       <div class="content">
+          <!-- navbar -->
+          <div class="navbar">Busy Beans</div>
+          <!-- slogan -->
+          <div class="slogan">
+              <h1>A RARE EXPERIENCE IN TASTE</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <button>Get Started</button>        
+            </div>
+       </div>
+    </div>
+</body>
+</html>
