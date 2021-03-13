@@ -1,0 +1,134 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AOS</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+        body{
+            background-color: #0f4c75;
+            margin: 0;
+            padding:0;
+            color:#f2f2f0;
+            font-family: 'Poppins', sans-serif;
+            font-size:1rem;
+            overflow-x: hidden;
+        }
+
+        .title{
+            text-align: center;
+            height: 5vh;
+            padding: 1%;
+        }
+
+        button{
+            background-color:#ff5e3a;
+            border:none;
+            outline:none;
+            color: #f2f2f0;
+            padding: 2.5%;
+            border-radius:10px;
+            box-shadow:0 -4px rgba(0,0,0,0.5) inset;
+            cursor:pointer;
+        }
+
+        section{
+            width:100%;
+            height: 100vh;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+        }
+
+        section:nth-child(1){
+            height: 95vh;
+        }
+
+        section .text,section img{
+            width:50%;
+        }
+
+        section .text{
+            padding: 6%;
+            text-align: center;
+        }
+
+        section img{
+            height: 60%;
+        }
+
+
+        @media screen and (max-width:768px){
+            .title{
+              font-size: 1.5rem;
+            }
+
+           section{
+               flex-direction: column;
+               height: fit-content;
+               min-height: 90vh;
+           } 
+           section .text,section img{
+               width:90%;
+           }
+
+           section .text{
+               order: 1;
+           }
+
+           section .img{
+               order: 2;
+           }
+        }
+
+        @media screen and (max-width:300px) {
+            button{
+                padding: 4%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">ANIMATION ON SCROLL</h1>
+
+
+    <!-- Section 1 -->
+    <section data-aos="zoom-in">
+       <div class="text">
+            <h1>Heading 1</h1>
+            <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
+            <button>Learn more</button>
+       </div>
+       <img src="images/Image_1.svg" >
+    </section>
+
+
+    <!-- Section 2 -->
+    <section>
+        <img src="images/Image_2.svg" data-aos="slide-right" data-aos-duration="1000">
+        <div class="text">
+             <h1>Heading 2</h1>
+             <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
+             <button>Learn more</button>
+        </div>
+    </section>
+
+
+    <!-- Section 3 -->
+     <section>
+        <div class="text">
+             <h1>Heading 3</h1>
+             <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
+             <button>Learn more</button>
+        </div>
+        <img src="images/Image_3.svg" data-aos="slide-left" data-aos-duration="1000">
+    </section>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
